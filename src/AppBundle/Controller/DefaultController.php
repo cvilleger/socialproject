@@ -8,10 +8,15 @@ use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
 {
+    /** @var Request $request */
+    protected $request;
 
-    public function indexAction(Request $request)
+    public function preExecute($request){
+        $this->request = $request;
+    }
+
+    public function indexAction()
     {
-
         return $this->render('default/index.html.twig');
     }
 }
