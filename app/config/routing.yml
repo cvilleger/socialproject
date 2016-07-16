@@ -2,6 +2,10 @@ app:
     resource: "@AppBundle/Controller/"
     type:     annotation
 
+user:
+    resource: "@UserBundle/Resources/config/routing.yml"
+    prefix:   /
+
 homepage:
     path:   /
     defaults:  { _controller: AppBundle:Default:index}
